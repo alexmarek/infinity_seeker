@@ -44,12 +44,6 @@ function add_child_theme_textdomain() {
 }
 add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
-add_filter('body_class', 'append_language_class');
-function append_language_class($classes){
-$classes[] = 'language-'.ICL_LANGUAGE_CODE; 
-return $classes;
-};
-
 /**
  * Disable the emoji's
  */

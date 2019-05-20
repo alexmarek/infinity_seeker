@@ -4,61 +4,90 @@
     background-color: $primary;
     color: $primaryWhite;
     padding-top: 10rem;
+
     .row {
         display: flex;
-        #text-7, #text-2 {
+
+        #text-7,
+        #text-2 {
             width: 70%;
         }
+
         #text-3 {
             display: none;
         }
-        #text-4, #text-6 {
+
+        #text-4,
+        #text-6 {
             width: 15%;
         }
+
         #text-5 {
             width: 15%;
         }
-        #text-4, #text-5, #text-6 {
-            p, a{
+
+        #text-4,
+        #text-5,
+        #text-6 {
+
+            p,
+            a {
                 @include lightFont;
                 line-height: 4rem;
-            }   
+            }
         }
-        @include respond(tab-port){
+
+        @include respond(tab-port) {
             flex-wrap: wrap;
-            #text-7, #text-2{
+
+            #text-7,
+            #text-2 {
                 width: 100%;
             }
-            #text-4, #text-5, #text-6{
+
+            #text-4,
+            #text-5,
+            #text-6 {
                 width: 50%;
                 margin-top: 10rem;
-                p, a{
+
+                p,
+                a {
                     line-height: 6rem;
-                }   
+                }
             }
         }
     }
-    .widget-title, a, p{
+
+    .widget-title,
+    a,
+    p {
         color: $primaryWhite;
         text-decoration: none;
         @include regularFont;
     }
-    .widget-title{
+
+    .widget-title {
         font-size: 1.8rem;
         line-height: 2.4rem;
     }
+
     form {
         max-width: 47rem;
         position: relative;
-        label, input[type="email"] {
+
+        label,
+        input[type="email"] {
             width: 100%;
             @include lightFont;
             text-transform: uppercase;
         }
-        label{
+
+        label {
             font-size: 1.8rem;
             line-height: 2.4rem;
         }
+
         input[type="email"] {
             line-height: 5rem;
             border: solid 1px $primaryWhite;
@@ -68,13 +97,16 @@
             font-size: 1.8rem;
             margin-top: 2rem;
             transition: background-color 0.2s ease-in-out;
-            &:focus{
+
+            &:focus {
                 background-color: #979797;
             }
         }
-        ::placeholder{
+
+        ::placeholder {
             color: $primaryWhite;
         }
+
         input[type=submit] {
             background-image: url(../images/arrow.svg);
             background-repeat: no-repeat;
@@ -92,23 +124,29 @@
             transition: -webkit-transform .2s ease-in-out;
             transition: transform .2s ease-in-out;
             transition: transform 0.2s ease-in-out, -webkit-transform 0.2s ease-in-out;
+
             &:hover {
                 transform: scale(1.25);
             }
         }
-        input[type=email]:-webkit-autofill, input:-webkit-autofill {
+
+        input[type=email]:-webkit-autofill,
+        input:-webkit-autofill {
             color: $primaryWhite !important;
             background-color: $primary !important;
         }
+
         .mc4wp-response {
             position: absolute;
             top: -16rem;
-            p{
+
+            p {
                 font-size: 1.6rem;
                 color: lightgreen;
             }
         }
-        @include respond(phone){
+
+        @include respond(phone) {
             max-width: 100%;
         }
     }
@@ -117,14 +155,16 @@
 .site-info {
     padding: 4rem 0;
     background-color: $primary;
+
     .logo {
-        background-image: url(../images/if-logo.svg);
+        // background-image: url();
         background-repeat: no-repeat;
         background-size: 100%;
         width: 11rem;
         height: 4.5rem;
         display: inline-block;
     }
+
     .back-to-top {
         font-size: .8em;
         float: right;
@@ -134,6 +174,7 @@
         border: none;
         cursor: pointer;
         @include regularFont;
+
         &__arrow {
             background-image: url(../images/chevron-white.svg);
             background-repeat: no-repeat;

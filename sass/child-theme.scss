@@ -3,10 +3,9 @@
 // @import "../src/sass/understrap/theme/contact-form7";// <-------- Loads some basic styling for contact form 7 plugin
 
 @import "theme/abstracts/variables";
-@import "theme/abstracts/mixins"; 
-@import "theme/abstracts/plugins"; 
+@import "theme/abstracts/mixins";
+@import "theme/abstracts/plugins";
 
-@import "theme/base/typography";
 @import "theme/base/animations";
 @import "theme/base/resets";
 
@@ -17,14 +16,7 @@
 @import "theme/utilities/buttons";
 @import "theme/utilities/helpers";
 
-@import "theme/pages/shared";
 @import "theme/pages/home";
-@import "theme/pages/grow";
-@import "theme/pages/taste";
-@import "theme/pages/impact";
-@import "theme/pages/findus";
-@import "theme/pages/career";
-@import "theme/pages/contact";
-@import "theme/pages/video";
+
 
 @import "theme/child_theme";

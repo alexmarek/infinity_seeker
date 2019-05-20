@@ -25,7 +25,7 @@
                     position: relative;
                     text-decoration: none;
 
-                    @include respond(tab-land){
+                    @include respond(tab-land) {
                         margin: 0 1.3em;
                     }
 
@@ -44,8 +44,10 @@
                         margin: 0 1.6em;
                     }
                 }
+
                 &-en {
                     margin-left: 2.5rem;
+
                     @include respond(tab-port) {
                         margin-left: 0;
                     }
@@ -58,10 +60,13 @@
                     font-weight: bold;
                 }
             }
+
             @include respond(tab-port) {
                 margin-top: 15rem;
+
                 li {
                     width: 100%;
+
                     a {
                         font-size: 2.4rem;
                         @include lightFont;
@@ -72,7 +77,8 @@
 
         .navbar-brand {
             display: inline-block;
-            background-image: url(../images/if-logo-black.svg);
+            // background-image: ;
+
             background-repeat: no-repeat;
             width: 14rem;
             height: 4.3rem;
@@ -82,17 +88,18 @@
 
         input {
             display: none;
+
             &:checked {
-                ~ .navbar-toggler-icon{
+                ~.navbar-toggler-icon {
                     background-image: url(../images/black-slim.svg);
                 }
-                
-                ~ .navbar-collapse {
+
+                ~.navbar-collapse {
                     transform: translateX(0);
                     pointer-events: all;
                 }
-            } 
-            
+            }
+
         }
 
         .navbar-toggler-icon {

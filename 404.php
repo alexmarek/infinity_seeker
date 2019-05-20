@@ -30,7 +30,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 								<div class="col-md-6"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/404.svg" alt="Page not found"></div>
 								<div class="col-md-6">
 									<h1 class="page-title">PAGE NOT FOUND</h1>
-									<a class="button button--black" href="https://infarm.com">
+									<a class="button button--black" href="/">
 										Return to home page
 									</a>
 								</div>
