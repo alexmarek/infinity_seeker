@@ -1,48 +1,17 @@
 <?php
-function understrap_remove_scripts() {
-    wp_dequeue_style( 'understrap-styles' );
-    wp_deregister_style( 'understrap-styles' );
-
-    wp_dequeue_script( 'understrap-scripts' );
-    wp_deregister_script( 'understrap-scripts' );
-
-    // Removes the parent themes stylesheet and scripts from inc/enqueue.php
-}
-add_action( 'wp_enqueue_scripts', 'understrap_remove_scripts', 20 );
 
 add_action( 'wp_enqueue_scripts', 'theme_enqueue_styles' );
 function theme_enqueue_styles() {
 
 	// Get the theme data
 	$the_theme = wp_get_theme();
-    wp_enqueue_style( 'child-understrap-styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
+    wp_enqueue_style( 'styles', get_stylesheet_directory_uri() . '/css/child-theme.min.css', array(), $the_theme->get( 'Version' ) );
     wp_enqueue_script( 'jQuery', 'https://code.jquery.com/jquery-2.2.3.min.js', array(), '2.2' );
-    wp_enqueue_script( 'child-understrap-scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), 1, true );
+    wp_enqueue_script( 'scripts', get_stylesheet_directory_uri() . '/js/child-theme.min.js', array(), 1, true );
     if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
         wp_enqueue_script( 'comment-reply' );
     }
 }
-
-function FindUsPage(){
-    if ( is_page('find-us') || is_page('standorte') || is_page('find-us-fr')) {
-        wp_enqueue_script('passive', 'https://unpkg.com/default-passive-events', array(), 1, true );
-        wp_enqueue_script('googlemaps', 'https://maps.googleapis.com/maps/api/js?key='. MAPS_API . '&libraries=geometry,places', array(), 1 );
-        wp_enqueue_script('clusterer', 'https://developers.google.com/maps/documentation/javascript/examples/markerclusterer/markerclusterer.js', array(), 1);
-        wp_enqueue_script('map', get_stylesheet_directory_uri() . '/js/map.min.js', array(), 4, true );
-    } 
-    // if ( is_page('find-us') ) {
-    //     wp_enqueue_script('map', get_stylesheet_directory_uri() . '/js/map.js', array(), 3, true );
-    // } 
-    // if ( is_page('standorte')) {
-    //     wp_enqueue_script('map', get_stylesheet_directory_uri() . '/js/map.min.js', array(), 4, true );
-    // } 
-}
-add_action('wp_enqueue_scripts','FindUsPage');
-
-function add_child_theme_textdomain() {
-    load_child_theme_textdomain( 'understrap-child', get_stylesheet_directory() . '/languages' );
-}
-add_action( 'after_setup_theme', 'add_child_theme_textdomain' );
 
 /**
  * Disable the emoji's

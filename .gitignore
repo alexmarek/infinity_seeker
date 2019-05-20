@@ -4,8 +4,6 @@ bower_components
 
 node_modules
 
-understrap.zip
-
 dist
 
 dist-product
@@ -13,9 +11,3 @@ dist-product
 npm-debug.log
 
 /vendor/
-
-/src/sass/understrap/
-
-/src/sass/bootstrap4/
-
-/src/sass/fontawesome/

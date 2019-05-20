@@ -1,11 +1,7 @@
 <?php
 /**
  * Sidebar setup for footer full.
- *
- * @package understrap
  */
-
-$container   = get_theme_mod( 'understrap_container_type' );
 
 ?>
 

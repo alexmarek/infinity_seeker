@@ -1,14 +1,11 @@
 <?php
 /**
  * The template for displaying 404 pages (not found).
- *
- * @package understrap
+
  */
 
 get_header();
 
-$container   = get_theme_mod( 'understrap_container_type' );
-$sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 
 ?>
 
@@ -27,7 +24,7 @@ $sidebar_pos = get_theme_mod( 'understrap_sidebar_position' );
 						<header class="page-header">
 
 							<div class="row">
-								<div class="col-md-6"><img src="<?php echo get_stylesheet_directory_uri() ?>/images/404.svg" alt="Page not found"></div>
+								<div class="col-md-6">&nbsp;</div>
 								<div class="col-md-6">
 									<h1 class="page-title">PAGE NOT FOUND</h1>
 									<a class="button button--black" href="/">
